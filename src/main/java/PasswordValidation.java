@@ -1,15 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-
-import org.apache.logging.log4j.Logger;
-
-
 import java.util.regex.Pattern;
 
 public class PasswordValidation {
-
-    private static final Logger logger = LogManager.getLogger(PasswordValidation.class.getName());
-
-
 
     public static  int counter = 0;
 
@@ -29,7 +20,7 @@ public class PasswordValidation {
             errorMessage +=  "password should be longer than 8 characters\n";
             }
 
-        if(password != "") {
+        if(!password.isEmpty()) {
             counter ++;
             } else {
             errorMessage += "password should exist\n";
@@ -63,25 +54,30 @@ public class PasswordValidation {
             errorMessage += "password should have at least one special character\n";
 
         }
-
-        if(password =="" && password.length() <= 8)
-
+         
+         if(password =="" && password.length() <= 8)
             errorMessage += "password is never Ok!";
 
-
-
+    
 
         return errorMessage;
      }
 
-    public boolean passwordIsOk(String password)
+    public static boolean passwordIsOk(String password)
     {
-        if(counter >= 3) {
-            logger.debug("User password is ok");
-        }else
-            logger.debug("User password is not ok");
-        return counter >=3;
+        if(!password.isEmpty() && password.length() < 8){
+            return false;
+        }
+<<<<<<< HEAD
+        else {
+            return counter >= 3;
+        }
 
+=======
+        else 
+            return counter >= 3;
+       
+>>>>>>> 8824df714d666e4b0cf3341743f012b4b46c3aa2
     }
 
 
@@ -90,7 +86,7 @@ public class PasswordValidation {
 
 
 
-     public static boolean hasDigit(String Password)
+    public static boolean hasDigit(String Password)
      {
         return Pattern.compile("[0-9]").matcher(Password).find();
      }
@@ -105,10 +101,7 @@ public class PasswordValidation {
         return Pattern.compile("[a-z]").matcher(Password).find();
     }
 
-    public static boolean hasSpecialChar(String Password)
-    {
-        return Pattern.compile("[!@#$%^&*(),.?\":{}|<>]").matcher(Password).find();
-    }
+    public static boolean hasSpecialChar(String Password) { return Pattern.compile("[!@#$%^&*(),.?\":{}|<>]").matcher(Password).find(); }
 
 
 

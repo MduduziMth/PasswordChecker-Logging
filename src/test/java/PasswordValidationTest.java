@@ -8,8 +8,8 @@ class PasswordValidationTest {
     @Test
     void TestPasswordIsValid()
     {
-        PasswordValidation checker =    new PasswordValidation();
-        checker.PasswordIsValid("");
+        PasswordValidation checker = new PasswordValidation();
+
 
         assertEquals("password should be longer than 8 characters\n" +
                 "password should exist\n" +
@@ -37,9 +37,6 @@ class PasswordValidationTest {
         assertEquals("password should have at least one special character\n",PasswordValidation.PasswordIsValid("Password1"));
 
 
-        assertEquals(true, checker.passwordIsOk("Password1"));
-
-
         assertEquals(true,PasswordValidation.hasDigit("1asd"));
 
         assertEquals(false,PasswordValidation.hasDigit("aaa"));
@@ -58,5 +55,36 @@ class PasswordValidationTest {
 
 
     }
+    
+    @Test
+    void isPasswordOK()
+    {
+        PasswordValidation checker =  new PasswordValidation();
+        checker.PasswordIsValid("P");
+
+        assertEquals(false, checker.passwordIsOk("P"));
+
+
+        checker.PasswordIsValid("Password1");
+        assertEquals(true, checker.passwordIsOk("Password1"));
+    }
+
+<<<<<<< HEAD
+    @Test
+    void isPasswordOK()
+    {
+        PasswordValidation checker =  new PasswordValidation();
+        checker.PasswordIsValid("P");
+
+        assertEquals(false, checker.passwordIsOk("P"));
+
+
+        checker.PasswordIsValid("Password1");
+        assertEquals(true, checker.passwordIsOk("Password1"));
+    }
+
 
 }
+=======
+}
+>>>>>>> 8824df714d666e4b0cf3341743f012b4b46c3aa2
