@@ -68,16 +68,11 @@ public class PasswordValidation {
         if(!password.isEmpty() && password.length() < 8){
             return false;
         }
-<<<<<<< HEAD
+
         else {
             return counter >= 3;
         }
 
-=======
-        else 
-            return counter >= 3;
-       
->>>>>>> 8824df714d666e4b0cf3341743f012b4b46c3aa2
     }
 
 

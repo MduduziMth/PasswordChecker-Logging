@@ -22,12 +22,11 @@ public class PasswordCheckMain {
             logger.error("User password Is not OK");
         }
 
-<<<<<<< HEAD
+
         //checker.passwordIsOk(password);
-=======
+
         System.out.println( checker.passwordIsOk(password));
-      
->>>>>>> 8824df714d666e4b0cf3341743f012b4b46c3aa2
+
     }
 
 

@@ -2,3 +2,7 @@
 password should have at least one uppercase letter
 password should have at least one special character
 
+2020-55-23 15:55:53.734 ERROR PasswordCheckMain - password should at least have one digit
+password should have at least one uppercase letter
+password should have at least one special character
+

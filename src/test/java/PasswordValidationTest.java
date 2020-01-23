@@ -69,22 +69,9 @@ class PasswordValidationTest {
         assertEquals(true, checker.passwordIsOk("Password1"));
     }
 
-<<<<<<< HEAD
-    @Test
-    void isPasswordOK()
-    {
-        PasswordValidation checker =  new PasswordValidation();
-        checker.PasswordIsValid("P");
-
-        assertEquals(false, checker.passwordIsOk("P"));
 
 
-        checker.PasswordIsValid("Password1");
-        assertEquals(true, checker.passwordIsOk("Password1"));
-    }
 
 
 }
-=======
-}
->>>>>>> 8824df714d666e4b0cf3341743f012b4b46c3aa2
+
